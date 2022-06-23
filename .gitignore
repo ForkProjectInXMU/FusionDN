@@ -1,3 +1,7 @@
 
 *.iml
 *.xml
+*.pyc
+models/model/model.ckpt.data-00000-of-00001
+models/model/model.ckpt.index
+models/model/model.ckpt.meta

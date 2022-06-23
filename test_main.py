@@ -7,30 +7,32 @@ import matplotlib.pyplot as plt
 import tensorflow as tf
 import scipy.ndimage
 from Generator import Generator
-from scipy.misc import imread, imsave
+# from scipy.misc import imread, imsave
+from imageio import imread, imsave
 
 from skimage import transform, data
 from glob import glob
 from model import Model
 
-LAM = 400
 
+os.environ["CUDA_VISIBLE_DEVICES"] = '0'
+LAM = 400
 MODEL_SAVE_PATH = './models/model/model.ckpt'
 
-output_path='./results/lam'+str(LAM)+'/vis_ir/'
-path = './test_imgs/vis_ir/'
-path1 = path + 'vis_gray'
-path2 = path + 'ir'
+# output_path='./results/lam'+str(LAM)+'/vis_ir/'
+# path = './test_imgs/vis_ir/'
+# path1 = path + 'vis_gray'
+# path2 = path + 'ir'
 
 # output_path = './results/far_near/'
 # path = './test_imgs/far_near/'
 # path1 = path + 'far_Y'
 # path2 = path + 'near_Y'
 
-# output_path='./results/lam'+str(LAM)+'/oe_ue/'
-# path = './test_imgs/oe_ue/'
-# path1 = path + 'oe_Y'
-# path2 = path + 'ue_Y'
+output_path='./results/lam'+str(LAM)+'/oe_ue/'
+path = './test_imgs/oe_ue/'
+path1 = path + 'oe_Y'
+path2 = path + 'ue_Y'
 
 # output_path='./results/lam'+str(LAM)+'/medical_only/'
 # path = './test_imgs/pet_mri/'
